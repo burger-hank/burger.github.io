@@ -1,0 +1,1887 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>電影網</title>
+    <link href="css/bootstrap-4.2.1.css" rel="stylesheet" type="text/css">
+</head>
+<style>
+    .carousel-inner img {
+        height: 100%;
+        width: 100%;
+    }
+
+    body {
+        padding-top: 56px
+    }
+
+    section {
+        padding-top: 1rem;
+        padding-bottom: 1rem
+    }
+
+    .lnr {
+        display: inline-block;
+        fill: currentColor;
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.05em;
+    }
+
+    .services-icon {
+        margin-bottom: 20px;
+        font-size: 30px;
+    }
+
+    .carousel-inner {
+
+        height: 1080px%;
+    }
+
+    h3 {
+        line-height: 76px;
+
+        color: blue;
+    }
+
+    .bg-dark .nav-item.active .nav-link,
+    .bg-dark .nav-item:hover .nav-link {
+        color: #F7FE22;
+    }
+    .marqee {
+	height: 3em;
+	margin: 0 auto;
+	overflow: hidden; 
+	position: relative;
+	background: #6c757d;
+}
+
+.marqee > ul {
+	padding-left: 0;
+	display: flex;
+	list-style-type: none;
+	animation: marqee 25s linear infinite;
+	position: absolute;
+}
+
+.marqee > ul > li {
+	white-space: nowrap;
+	margin-right: 2em;
+	font-weight: bold;
+	color: #ffc107;
+}
+
+@keyframes marqee {
+	0% {
+		left: 100%;
+		transform: translateX(0%);
+	}
+
+	100% {
+		left: 0;
+		transform: translateX(-100%);
+	}
+}
+
+</style>
+
+<body>
+
+    <!-- LOGO-至頂選單 -->
+    <div style="padding-top: 70">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark"> <svg class="lnr text-primary services-icon">
+                <use xlink:href="#lnr-camera-video"></use>
+            </svg><a class="navbar-brand text-primary" href="#">電影網</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+                <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item active"> <a class="nav-link" data-toggle="tab" href="#home">回到首頁 <span class="sr-only">(current)</span></a> </li>
+                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#menu1">推薦電影</a> </li>
+                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#menu2">最新消息</a> </li>
+                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#menu3">本周更新</a> </li>
+                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#menu4">敲碗留言</a> </li>
+                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#menu5">關於團隊</a> </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="電影名稱" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜尋電影</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="home">
+            <!-- 全版廣告連結 youtube -->
+            <div id="demo" class="carousel slide carousel-fade " data-ride="carousel">
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="https://www.youtube.com/watch?v=1NX4BEyjmVw" target="_blank" title="https://www.youtube.com/watch?v=1NX4BEyjmVw"><img src="img/魔鬼終結者.jpg" alt="Los Angeles"></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://www.youtube.com/watch?v=KM2Zu-mXscs" target="_blank" title="https://www.youtube.com/watch?v=KM2Zu-mXscs"><img src="img/冰雪.jpg" alt="Chicago"></a>
+
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://www.youtube.com/watch?v=S7o7i9haaS8" target="_blank" title="https://www.youtube.com/watch?v=S7o7i9haaS8"><img src="img/遺怨.jpg" alt="New York"></a>
+
+                    </div>
+                </div>
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+
+
+            <!-- 電影選擇 二 -->
+            <nav class="navbar   navbar-expand-md ">
+                <p class="h2 text-dark">電影分類</p>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+                    <ul class="nav nav-tabs mr-auto nav-pills ">
+
+                        <li class="nav-item"><a class="nav-link text-white" data-toggle="tab" href="#m07">全部</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" data-toggle="tab" href="#m01">動作</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" data-toggle="tab" href="#m02">奇幻</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" data-toggle="tab" href="#m03">英雄</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" data-toggle="tab" href="#m04">恐怖</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" data-toggle="tab" href="#m05">動畫</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- 電影內文 -->
+            <div class="tab-content">
+
+                <div class="tab-pane " id="m01">
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-md-3 mb-4 ">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/金牌特務.jpg" class="card-img-top" alt="">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">金牌特務：金士曼起源</h5>
+                                        <p class="text-muted card-text">2020年上映的動作冒險片，為2015年電影《金牌特務》的前傳、「金牌特務」的第三部作品。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#金牌">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="金牌" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">金牌特務：金士曼起源</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/金牌特務.jpg" class="card-img-top" alt="">
+                                                        《金牌特務：金士曼起源》（英語：The King's Man）是一部於2020年上映的英美合拍動作冒險片，由馬修·范恩執導，卡爾·蓋達塞克撰寫劇本。電影改編自漫畫《金牌特務》，為2015年電影《金牌特務》的前傳、「金牌特務」的第三部作品。主演包括雷夫·范恩斯、哈里斯·迪金森、丹尼爾·布爾、查爾斯·丹斯、萊斯·伊凡、馬修·古迪、亞倫·強森、潔瑪·艾特頓、湯姆·荷蘭德、吉蒙·韓蘇和艾莉森·斯戴曼。
+
+                                                        《金牌特務：金士曼起源》由二十世紀福斯定於2020年2月14日在美國上映。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=dwFU7xRbAIc" target="_blank" title="https://www.youtube.com/watch?v=dwFU7xRbAIc">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/玩命關頭.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">玩命關頭：特別行動</h5>
+                                        <p class="text-muted card-text">2019年上映的動作片，為《玩命關頭系列》首部衍生的外傳電影。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#玩命">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="玩命" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">玩命關頭：特別行動</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/玩命關頭.jpg" class="card-img-top" alt="">
+                                                        《玩命關頭：特別行動》（英語：Fast & Furious Presents: Hobbs & Shaw，或簡稱Hobbs & Shaw）是一部於2019年上映的美國動作片，由大衛·雷奇執導，克里斯·摩根編劇。該片為《玩命關頭系列》首部衍生的外傳電影。主演包括巨石強森、傑森·史塔森、伊卓瑞斯·艾巴、凡妮莎·寇比和海倫·米蘭。
+
+                                                        本片由環球影業於2019年8月2日在美國上映。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=rhw0KAQezyQ" target="_blank" title="https://www.youtube.com/watch?v=rhw0KAQezyQ">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/捍衛任務.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">捍衛任務3：全面開戰</h5>
+                                        <p class="text-muted card-text">2019年上映的新黑色動作驚悚片，為《捍衛任務》系列電影的第三部作品。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#捍衛">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="捍衛" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">捍衛任務3：全面開戰</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/捍衛任務.jpg" class="card-img-top" alt="">
+                                                        《捍衛任務3：全面開戰》（英語：John Wick: Chapter 3 – Parabellum，或稱作John Wick: Chapter 3）是一部2019年美國新黑色動作驚悚片，由查德·史塔赫斯基執導，德瑞克·柯斯達、謝伊·哈登、克里斯·柯林斯及馬可·阿布拉姆斯共同編劇。主演包括基努·李維、荷莉·貝瑞、伊恩·麥克夏恩、藍斯·瑞迪克、勞倫斯·費許朋與馬克·德可斯可。本片為2017年電影《捍衛任務2：殺神回歸》的續集，以及《捍衛任務》系列電影的第三部作品。該片於2018年5月在紐約市開拍，並由獅門娛樂於2019年5月17日在美國上映。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=8Bl-TiF-7R8" target="_blank" title="https://www.youtube.com/watch?v=8Bl-TiF-7R8">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/不可能.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">不可能的任務：全面瓦解</h5>
+                                        <p class="text-muted card-text">2018年上映的諜報動作片，為「不可能的任務電影系列」的第六部作品。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#不可能">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="不可能" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">不可能的任務：全面瓦解</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/不可能.jpg" class="card-img-top" alt="">
+                                                        《不可能的任務：全面瓦解》（英語：Mission: Impossible – Fallout）是一部2018年美國諜報動作片，同時也容納有秘密結社跟新世界秩序與陰謀論的政治驚悚片情節，由克里斯多福·麥奎里執導和編劇，並與J·J·亞柏拉罕、布萊恩·柏克、湯姆·克魯斯、大衛·艾里森、達娜·高伯格和唐·格蘭傑共同擔任監製。電影改編自布魯斯·蓋勒創作的電視劇《虎膽妙算》，同時也是2015年電影《不可能的任務：失控國度》的續集以及「不可能的任務電影系列」的第六部作品，並新加入了安琪拉·貝瑟、凡妮莎·寇比跟亨利·卡維爾於系列中。
+
+                                                        其主演包括克魯斯、卡維爾、文·雷姆斯、賽門·佩吉、蕾貝卡·弗格森、西恩·哈里斯、貝瑟、寇比、蜜雪兒·摩納漢以及亞歷·鮑德溫。該片於2018年7月27日在美國上映。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=LbqTJbXMCHc" target="_blank" title="https://www.youtube.com/watch?v=LbqTJbXMCHc">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="tab-pane " id="m02">
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/神鬼奇航.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">加勒比海盜 神鬼奇航：死無對證</h5>
+                                        <p class="text-muted card-text">2017年上映的劍客奇幻電影，為「神鬼奇航系列電影」的第五部作品。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#神鬼奇航">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="神鬼奇航" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">加勒比海盜 神鬼奇航：死無對證</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/神鬼奇航.jpg" class="card-img-top" alt="">
+                                                        《加勒比海盜－神鬼奇航：死無對證》（英語：Pirates of the Caribbean: Dead Men Tell No Tales，也稱作Pirates of the Caribbean: The Revenge of Salazar及Pirates of the Caribbean: Salazar's Revenge）是一部於2017年上映的美國劍客奇幻電影，為「神鬼奇航系列電影」的第五部作品。由喬阿吉姆·羅恩尼和艾斯彭·山德伯格共同執導，傑夫·內桑森編劇，而傑瑞·布洛克海默則再次擔任監製。強尼·戴普、傑佛瑞·羅許、奧蘭多·布魯、綺拉·奈特莉皆回歸分別飾演傑克·史派羅、海克特·巴博薩、威爾·杜納、伊莉莎白·史旺，其他演員包含哈維爾·巴登、布蘭頓·思懷茲、凱亞·絲柯黛蘭莉歐與凱文·麥克納利。電影定於2017年5月26日在美國上映。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=LldnSzk4uD4" target="_blank" title="https://www.youtube.com/watch?v=LldnSzk4uD4">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/哈利波特.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">哈利波特：死神的聖物Ⅱ</h5>
+                                        <p class="text-muted card-text">2011年上映的奇幻電影，劇情根據小說《哈利波特—死神的聖物》改編</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#哈利波特">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="哈利波特" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">哈利波特：死神的聖物Ⅱ</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/哈利波特.jpg" class="card-img-top" alt="">
+                                                        《哈利波特－死神的聖物2》（英語：Harry Potter and the Deathly Hallows – Part 2）根據J·K·羅琳所寫的哈利波特小說系列的第七本《哈利波特—死神的聖物》改編。此書是唯一一本被改編拍成兩套電影的小說，這兩套電影為哈利波特系列電影中第七及第八部電影，亦是該系列的最後兩部。導演繼續由拍攝第五、六集的導演—大衛·葉斯執導。這兩套電影由華納兄弟發行，第二部以3D及2D兩種版本上映，第二部是哈利波特電影系列中首次把整套電影以3D形式播放，另外亦推出IMAX版本。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=jgpJoKDzoZ4" target="_blank" title="https://www.youtube.com/watch?v=jgpJoKDzoZ4">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/納尼亞.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">納尼亞傳奇：黎明行者號</h5>
+                                        <p class="text-muted card-text">2010年上映的奇幻冒險電影，劇情根據小說《黎明行者號》改編。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#納尼亞">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="納尼亞" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">納尼亞傳奇：黎明行者號</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/納尼亞.jpg" class="card-img-top" alt="">
+                                                        《納尼亞傳奇：黎明行者號》（英語：The Chronicles of Narnia: The Voyage of the Dawn Treader）是一部於2010年上映的奇幻冒險電影，劇情根據小說《黎明行者號》改編，且是第三部以C·S·路易斯史詩奇幻系列《納尼亞傳奇》作為藍本的電影（小說時序中排第五）。該片也為威登媒體製作的《納尼亞傳奇》系列電影中的第三部，且同時也是最後一部。《納尼亞傳奇：黎明行者號》是系列中唯一由二十世紀福斯發行的作品，由於華特迪士尼影業選擇不與威登媒體在預算糾紛後繼續擔任製片商。該片也是系列中唯一以數位3D格式上映的作品。
+
+                                                        電影為麥可·艾普特執導，克里斯多佛·馬庫斯、史蒂芬·麥費利及麥克·派卓羅尼共同編劇。演員包含喬基·亨莉、史肯達·凱恩斯、班·巴恩斯、威爾·普爾特、蒂妲·絲雲頓、連恩·尼遜與賽門·佩吉等人。該片於2010年11月30日在倫敦皇家電影專場上首映，並在同年12月10日開始於全球發行。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=vfc4xqs2A1c" target="_blank" title="https://www.youtube.com/watch?v=vfc4xqs2A1c">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/魔戒.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">魔戒三部曲：王者再臨</h5>
+                                        <p class="text-muted card-text">2003年上映的史詩奇幻電影，劇情根據小說《魔戒》的第二部曲及第三部曲改編。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#魔戒">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="魔戒" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">魔戒三部曲：王者再臨</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/魔戒.jpg" class="card-img-top" alt="">
+                                                        《魔戒三部曲：王者再臨》（英語：The Lord of the Rings: The Return of the King），是一部於2003年上映的史詩奇幻電影，由彼得·傑克森執導，此片是根據J·R·R·托爾金的奇幻小說《魔戒》的第二部曲及第三部曲改編而成。本片也是《魔戒電影三部曲》的完結篇，前兩部曲分別為《魔戒首部曲：魔戒現身》（2001）與《魔戒二部曲：雙城奇謀》（2002）。
+
+                                                        電影於2003年12月17日上映，《魔戒三部曲：王者再臨》獲得巨大迴響並且成為史上最賣座的電影之一。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=bhZi6VX7xVg" target="_blank" title="https://www.youtube.com/watch?v=bhZi6VX7xVg">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="tab-pane " id="m03">
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/蜘蛛人.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">蜘蛛人：離家日</h5>
+                                        <p class="text-muted card-text">2019年上映的超級英雄電影，為「漫威電影宇宙」系列的第二十三部電影，亦是漫威電影宇宙「無限傳奇」的最後一部電影。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#蜘蛛人">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="蜘蛛人" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">蜘蛛人：離家日</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/蜘蛛人.jpg" class="card-img-top" alt="">
+                                                        《蜘蛛人：離家日》（英語：Spider-Man: Far From Home，中國大陸譯《蜘蛛俠：英雄遠征》，香港譯《蜘蛛俠：決戰千里》）是一部於2019年上映的美國超級英雄電影，由漫威漫畫旗下角色蜘蛛人故事改編，哥倫比亞影業與漫威工作室共同製片，並由索尼影視娛樂發行。本片為2017年電影《蜘蛛人：返校日》的續集，「漫威電影宇宙」系列的第二十三部電影，亦是漫威電影宇宙「無限傳奇」的最後一部電影。由強·華茲執導，克里斯·麥肯納和艾瑞克·桑默斯共同編劇。主演包括湯姆·霍蘭德、山繆·傑克森、辛蒂亞、蔻碧·史莫德、強·法夫洛、J·B·史慕福、雅各布·貝塔隆、馬丁·斯塔爾、瑪麗莎·托梅和傑克·葛倫霍。該片為首部史丹·李未在漫威電影宇宙中客串角色的電影，亦是繼《終局之戰》後第二部漫威電影宇宙加上全新片段後重映的作品。電影於2019年7月2日在美國以IMAX和3D形式發行。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=6ytcJdQpvVE" target="_blank" title="https://www.youtube.com/watch?v=6ytcJdQpvVE">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/黑鳳凰.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">X戰警：黑鳳凰</h5>
+                                        <p class="text-muted card-text">2019年上映的超級英雄電影，角色取自漫威漫畫的漫畫書《X戰警》，為「X戰警系列電影」的第十二部作品，也是其系列最終回。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#黑鳳凰">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="黑鳳凰" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">X戰警：黑鳳凰</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/黑鳳凰.jpg" class="card-img-top" alt="">
+                                                        《X戰警：黑鳳凰》（英語：Dark Phoenix，或記作X-Men: Dark Phoenix）是2019年上映的美國超級英雄電影，角色取自漫威漫畫的漫畫書《X戰警》，由二十世紀福斯製作並通過華特迪士尼工作室電影執行發行。該片為「X戰警系列電影」的第十二部作品，也是其系列最終回。本片原本作為全新的X戰警電影三部曲的首部曲，但在迪士尼收購影響下，確認為「X戰警系列電影」最終章。其後福斯重新製作，並且由迪士尼發行。也是第一部由迪士尼發行非「漫威電影宇宙」的漫威電影。
+
+                                                        《X戰警：黑鳳凰》由賽門·金柏格執導及編劇，詹姆斯·麥艾維、麥可·法斯賓達、珍妮佛·勞倫斯、尼可拉斯·霍特、蘇菲·特納、泰·謝里丹、雅莉珊卓·希普以及潔西卡·崔絲坦主演。在《X戰警：黑鳳凰》中，X戰警必須面對黑鳳凰與傾巢而出的迪巴利人。該片於2019年6月7日在美國上映。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=6HukltTp8fc" target="_blank" title="https://www.youtube.com/watch?v=6HukltTp8fc">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/復仇者.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">復仇者聯盟：終局之戰</h5>
+                                        <p class="text-muted card-text">2019年上映的史詩超級英雄電影，改編自漫威漫畫旗下的超級英雄團隊復仇者聯盟，為「漫威電影宇宙」系列的第22部電影作品。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#復仇者">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="復仇者" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">復仇者聯盟：終局之戰</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/復仇者.jpg" class="card-img-top" alt="">
+                                                        《復仇者聯盟：終局之戰》（英語：Avengers: Endgame）是一部於2019年上映的美國史詩超級英雄電影，改編自漫威漫畫旗下的超級英雄團隊復仇者聯盟，由漫威影業製作及華特迪士尼工作室電影發行。本片為2018年電影《復仇者聯盟：無限之戰》的續集，同時也是漫威電影宇宙（MCU）系列的第22部電影作品。此電影由羅素兄弟執導，及由史蒂芬·麥費利與克里斯多佛·馬庫斯負責撰寫劇本。電影主演包括小勞勃·道尼、克里斯·伊凡、馬克·盧法洛、克里斯·漢斯沃、史嘉蕾·喬韓森、傑瑞米·雷納、唐·奇鐸、保羅·路德、布麗·拉森、凱倫·吉蘭、達娜·古瑞拉、布萊德利·庫柏和喬許·布洛林。克里斯·伊凡表示，本片將是他最後一部漫威宇宙系列的電影。電影中，復仇者聯盟中的倖存成員與他們的盟友共同努力以扭轉薩諾斯在無限之戰中所造成的傷害。電影於2019年4月22日在洛杉磯舉行全球首映禮，並於2019年4月26日在美國以IMAX和3D形式發行。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=ZrB7EdfPBJU" target="_blank" title="https://www.youtube.com/watch?v=ZrB7EdfPBJU">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/驚奇隊長.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">驚奇隊長</h5>
+                                        <p class="text-muted card-text">2019年上映的超級英雄電影，劇情改編自漫威漫畫角色卡蘿·丹佛斯，為「漫威電影宇宙」系列的第二十一部電影。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#驚奇隊長">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="驚奇隊長" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">驚奇隊長</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/驚奇隊長.jpg" class="card-img-top" alt="">
+                                                        《驚奇隊長》（英語：Captain Marvel，香港譯《Marvel隊長》，中國大陸譯《驚奇隊長》）是一部於2019年上映的美國超級英雄電影，劇情改編自漫威漫畫角色卡蘿·丹佛斯。漫威工作室製片，華特迪士尼工作室電影負責發行，本片為漫威電影宇宙系列的第二十一部電影。安娜·波頓和瑞安·弗雷克執導，並與梅格·雷法芙、妮可·帕爾曼、吉妮瓦·羅伯森-多瑞、莉茲·弗拉夫和卡莉·門施共同編劇。由布麗·拉森、山繆·傑克森、班·曼德森、吉蒙·韓蘇、李·培斯、拉沙納·林奇、嘉瑪·陳、安妮特·班寧、克拉克·格雷格和裘德·洛主演。背景設定在1990年代，講述卡蘿·丹佛斯在地球陷入兩個外星人世界的宇宙戰爭之間後，成為驚奇隊長。該片為漫威電影宇宙的首部女英雄獨立電影。本片開頭標誌特效所出現角色全部改為已逝世的史丹·李並紀念他。《驚奇隊長》於2019年3月8日在美國上映（含IMAX版本和3D版本）。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=8_iXX6t6nFY" target="_blank" title="https://www.youtube.com/watch?v=8_iXX6t6nFY">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="tab-pane " id="m04">
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/牠.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">牠：第二章</h5>
+                                        <p class="text-muted card-text">2019年上映的超自然冒險恐怖片，電影改編自史蒂芬·金的1986年小說《牠》，為2017年電影《牠》的續集。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#牠">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="牠" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">牠：第二章</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/牠.jpg" class="card-img-top" alt="">
+                                                        《牠：第二章》（英語：It Chapter Two，中國大陸、香港譯《小丑回魂2》）是一部2019年美國超自然冒險恐怖片，由安迪·馬希提執導，蓋瑞·道柏曼編劇。電影改編自史蒂芬·金的1986年小說《牠》，為2017年電影《牠》的續集，由新線影業、林氏電影公司、凱森史密斯製作公司和眩暈娛樂製片，華納兄弟發行。
+
+                                                        電影主演包括詹姆斯·麥艾維、潔西卡·崔絲坦、比爾·哈德、以賽亞·穆斯塔法、傑·瑞安、詹姆士·蘭森、安迪·賓和比爾·史柯斯嘉。主體拍攝於2018年6月18日在加拿大多倫多進行，並於10月31日結束拍攝。
+
+                                                        電影於2019年9月6日在美國上映。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=WuiEiE0nXio" target="_blank" title="https://www.youtube.com/watch?v=WuiEiE0nXio">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/安娜.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">安娜貝爾回家囉</h5>
+                                        <p class="text-muted card-text">2019年上映的超自然恐怖片，為2017年電影《安娜貝爾：造孽》的續集，同時是厲陰宅宇宙的第四部衍生作品。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#安娜">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="安娜" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">安娜貝爾回家囉</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/安娜.jpg" class="card-img-top" alt="">
+                                                        《安娜貝爾回家囉》（英語：Annabelle Comes Home）是一部於2019年上映的美國超自然恐怖片，由蓋瑞·道柏曼編劇和執導，彼得·沙佛朗和溫子仁製片，為2017年電影《安娜貝爾：造孽》的續集，同時是厲陰宅宇宙的第四部衍生作品。主演包括麥肯娜·葛瑞絲、麥蒂森·艾斯曼和凱蒂·薩里夫，包含派翠克·威爾森和薇拉·法蜜嘉回歸飾演華倫夫婦。
+
+                                                        電影在美國於2019年6月26日由華納兄弟發行。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=T3wEJMWgT60" target="_blank" title="https://www.youtube.com/watch?v=T3wEJMWgT60">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/哭泣.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">哭泣的女人</h5>
+                                        <p class="text-muted card-text">2019年上映的靈異恐怖片，該片於2019年3月被官方證實為厲陰宅宇宙的一部分。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#哭泣">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="哭泣" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">哭泣的女人</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/哭泣.jpg" class="card-img-top" alt="">
+                                                        《哭泣的女人》（英語：The Curse of La Llorona，中國大陸譯《哭泣的女人的詛咒》，香港譯《哭泣的女詭》）是一部2019年美國靈異恐怖片，由麥可·查維斯（Michael Chaves）執導，米克基·達特里（Mikki Daughtry）和托比亞斯·伊安柯尼斯撰寫劇本。其主演包括琳達·卡德琳妮、雷蒙·克魯茲及帕翠西婭·維拉奎茲。該片由溫子仁的製片公司Atomic Monster Productions製作，而他也在片中擔任監製。該片於2019年3月被官方證實為厲陰宅宇宙的一部分。
+
+                                                        該片原名為《The Children》。《哭泣的女人》由華納兄弟排定於2019年4月19日在美國上映。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=Y1NmTqgQZrU" target="_blank" title="https://www.youtube.com/watch?v=Y1NmTqgQZrU">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/忌日.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">祝你忌日快樂</h5>
+                                        <p class="text-muted card-text">2019年上映的校園科幻恐怖喜劇片，該片為2017年電影《忌日快樂》的續集。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#忌日">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="忌日" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">祝你忌日快樂</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/忌日.jpg" class="card-img-top" alt="">
+                                                        《祝你忌日快樂》（英語：Happy Death Day 2U，中國大陸譯《忌日快樂2》，香港譯《死亡無限2次LOOP》）是一部2019年美國校園科幻恐怖喜劇片，由克里斯多福·B·藍登執導和編劇，該片為2017年電影《忌日快樂》的續集。其主演包括潔西卡·羅瑟、伊瑟瑞爾·布薩德、蘇瑞吉·沙瑪、莎拉·亞金（Sarah Yarkin）及露比·莫汀。該片定於2019年2月14日在美國上映。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=i62fw7wNXQg" target="_blank" title="https://www.youtube.com/watch?v=i62fw7wNXQg">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane " id="m05">
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/阿達.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">阿達一族</h5>
+                                        <p class="text-muted card-text">2019年上映的電腦動畫電影，改編自查理斯·亞當斯的漫畫《阿達一族》。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#阿達">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="阿達" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">阿達一族</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/阿達.jpg" class="card-img-top" alt="">
+                                                        《阿達一族》（英語：The Addams Family）是一部於2019年上映的美國黑色喜劇電腦動畫電影，改編自查理斯·亞當斯的漫畫《阿達一族》。電影由康拉德·威儂和格雷格·帝爾南共同執導，奧斯卡·伊薩克、莎莉·賽隆、克蘿伊·摩蕾茲、芬恩·沃夫哈德、尼克·克羅爾、史努比狗狗、貝蒂·蜜勒和艾莉森·珍妮配音。
+
+                                                        《阿達一族》由聯美負責北美發行，國際則由環球影業負責發行，並於2019年10月11日在美國上映。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=4rjSMNvkaw4" target="_blank" title="https://www.youtube.com/watch?v=4rjSMNvkaw4">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/壞壞萌雪怪.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">壞壞萌雪怪</h5>
+                                        <p class="text-muted card-text">2019年上映的電腦動畫電影奇幻喜劇冒險片，由夢工廠動畫公司和中國東方夢工廠製作。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#壞壞萌雪怪">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="壞壞萌雪怪" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">壞壞萌雪怪</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/壞壞萌雪怪.jpg" class="card-img-top" alt="">
+                                                        《壞壞萌雪怪》（英語：Abominable）是一部於2019年上映的中美合拍3D電腦動畫電影奇幻喜劇冒險片，由夢工廠動畫公司和中國東方夢工廠製作，吉爾·庫爾頓和托德·韋爾德曼執導，威廉·戴維斯編劇，配音員包括汪可盈、蔡丞恩、登舍·諾吉·特雷納、埃迪·伊扎德、薩拉·保羅森及周采芹。
+
+                                                        電影於2019年9月27日由環球影業發行。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=XBu2AWepWIo" target="_blank" title="https://www.youtube.com/watch?v=XBu2AWepWIo">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/憤怒鳥.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">憤怒鳥玩電影2：冰的啦！</h5>
+                                        <p class="text-muted card-text">2019年上映的電腦動畫動作喜劇電影，改編自遊戲《憤怒鳥》，為2016年電影《憤怒鳥玩電影》的續集。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#憤怒鳥">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="憤怒鳥" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">憤怒鳥玩電影2：冰的啦！</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/憤怒鳥.jpg" class="card-img-top" alt="">
+                                                        《憤怒鳥玩電影2：冰的啦！》（英語：The Angry Birds Movie 2）是一部2019年芬蘭、美國合拍的3D電腦動畫動作喜劇電影，改編自遊戲《憤怒鳥》，為2016年電影《憤怒鳥玩電影》的續集，由索普·範·奧爾曼和約翰·賴斯執導，哥倫比亞影業、Rovio動畫和索尼動畫製作。
+
+                                                        電影於2019年8月14日在美國上映，由索尼影視娛樂發行。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=kSnUfyy9p7k" target="_blank" title="https://www.youtube.com/watch?v=kSnUfyy9p7k">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/玩具總動員.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">玩具總動員4</h5>
+                                        <p class="text-muted card-text">2019年上映的3D動畫電影，由皮克斯動畫工作室製作、華特迪士尼工作室電影發行，為「玩具總動員系列電影」的第四部作品。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#玩具總動員">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="玩具總動員" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">玩具總動員4</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/玩具總動員.jpg" class="card-img-top" alt="">
+                                                        《玩具總動員4》（英語：Toy Story 4，香港譯《反斗奇兵4》，中國大陸譯《玩具總動員4》）是一部於2019年上映的美國3D動畫電影，由皮克斯動畫工作室製作、華特迪士尼工作室電影發行。電影為2010年電影《玩具總動員3》的續集、「玩具總動員系列電影」的第四部作品，由喬許·科雷執導。湯姆·漢克斯、提姆·艾倫、安妮·波特斯、瓊安·庫薩克、華萊士·肖恩、約翰·雷森伯格、布萊克·克拉克、唐·里柯斯和伊絲特拉·哈里斯回歸聲演自己的角色，新的配音員包括托尼·海爾、基根-麥可·奇、喬登·皮爾、基努·李維和克莉絲汀娜·韓翠克絲，電影原定於2017年6月16日發行，但是在2015年10月8日，皮克斯將上映日期推遲到2018年6月15日，原本的檔期被《汽車總動員3》所取代。2016年10月26日，發布又被延遲，定於2019年6月21日上映，而2018年6月15日的檔期則改成《超人特攻隊2》。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=RA-11WlGGkE" target="_blank" title="https://www.youtube.com/watch?v=RA-11WlGGkE">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="tab-pane active" id="m07">
+                    <div class="container">
+                        <h2>動作</h2>
+                        <div class="row">
+                            <div class="col-md-3 mb-4 ">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/金牌特務.jpg" class="card-img-top" alt="">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">金牌特務：金士曼起源</h5>
+                                        <p class="text-muted card-text">2020年上映的動作冒險片，為2015年電影《金牌特務》的前傳、「金牌特務」的第三部作品。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#金牌2">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="金牌2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">金牌特務：金士曼起源</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/金牌特務.jpg" class="card-img-top" alt="">
+                                                        《金牌特務：金士曼起源》（英語：The King's Man）是一部於2020年上映的英美合拍動作冒險片，由馬修·范恩執導，卡爾·蓋達塞克撰寫劇本。電影改編自漫畫《金牌特務》，為2015年電影《金牌特務》的前傳、「金牌特務」的第三部作品。主演包括雷夫·范恩斯、哈里斯·迪金森、丹尼爾·布爾、查爾斯·丹斯、萊斯·伊凡、馬修·古迪、亞倫·強森、潔瑪·艾特頓、湯姆·荷蘭德、吉蒙·韓蘇和艾莉森·斯戴曼。
+
+                                                        《金牌特務：金士曼起源》由二十世紀福斯定於2020年2月14日在美國上映。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=dwFU7xRbAIc" target="_blank" title="https://www.youtube.com/watch?v=dwFU7xRbAIc">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/玩命關頭.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">玩命關頭：特別行動</h5>
+                                        <p class="text-muted card-text">2019年上映的動作片，為《玩命關頭系列》首部衍生的外傳電影。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#玩命2">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="玩命2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">玩命關頭：特別行動</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/玩命關頭.jpg" class="card-img-top" alt="">
+                                                        《玩命關頭：特別行動》（英語：Fast & Furious Presents: Hobbs & Shaw，或簡稱Hobbs & Shaw）是一部於2019年上映的美國動作片，由大衛·雷奇執導，克里斯·摩根編劇。該片為《玩命關頭系列》首部衍生的外傳電影。主演包括巨石強森、傑森·史塔森、伊卓瑞斯·艾巴、凡妮莎·寇比和海倫·米蘭。
+
+                                                        本片由環球影業於2019年8月2日在美國上映。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=rhw0KAQezyQ" target="_blank" title="https://www.youtube.com/watch?v=rhw0KAQezyQ">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/捍衛任務.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">捍衛任務3：全面開戰</h5>
+                                        <p class="text-muted card-text">2019年上映的新黑色動作驚悚片，為《捍衛任務》系列電影的第三部作品。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#捍衛2">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="捍衛2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">捍衛任務3：全面開戰</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/捍衛任務.jpg" class="card-img-top" alt="">
+                                                        《捍衛任務3：全面開戰》（英語：John Wick: Chapter 3 – Parabellum，或稱作John Wick: Chapter 3）是一部2019年美國新黑色動作驚悚片，由查德·史塔赫斯基執導，德瑞克·柯斯達、謝伊·哈登、克里斯·柯林斯及馬可·阿布拉姆斯共同編劇。主演包括基努·李維、荷莉·貝瑞、伊恩·麥克夏恩、藍斯·瑞迪克、勞倫斯·費許朋與馬克·德可斯可。本片為2017年電影《捍衛任務2：殺神回歸》的續集，以及《捍衛任務》系列電影的第三部作品。該片於2018年5月在紐約市開拍，並由獅門娛樂於2019年5月17日在美國上映。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=8Bl-TiF-7R8" target="_blank" title="https://www.youtube.com/watch?v=8Bl-TiF-7R8">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/不可能.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">不可能的任務：全面瓦解</h5>
+                                        <p class="text-muted card-text">2018年上映的諜報動作片，為「不可能的任務電影系列」的第六部作品。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#不可能2">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="不可能2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">不可能的任務：全面瓦解</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/不可能.jpg" class="card-img-top" alt="">
+                                                        《不可能的任務：全面瓦解》（英語：Mission: Impossible – Fallout）是一部2018年美國諜報動作片，同時也容納有秘密結社跟新世界秩序與陰謀論的政治驚悚片情節，由克里斯多福·麥奎里執導和編劇，並與J·J·亞柏拉罕、布萊恩·柏克、湯姆·克魯斯、大衛·艾里森、達娜·高伯格和唐·格蘭傑共同擔任監製。電影改編自布魯斯·蓋勒創作的電視劇《虎膽妙算》，同時也是2015年電影《不可能的任務：失控國度》的續集以及「不可能的任務電影系列」的第六部作品，並新加入了安琪拉·貝瑟、凡妮莎·寇比跟亨利·卡維爾於系列中。
+
+                                                        其主演包括克魯斯、卡維爾、文·雷姆斯、賽門·佩吉、蕾貝卡·弗格森、西恩·哈里斯、貝瑟、寇比、蜜雪兒·摩納漢以及亞歷·鮑德溫。該片於2018年7月27日在美國上映。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=LbqTJbXMCHc" target="_blank" title="https://www.youtube.com/watch?v=LbqTJbXMCHc">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <h2>奇幻</h2>
+                        <div class="row">
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/神鬼奇航.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">加勒比海盜 神鬼奇航：死無對證</h5>
+                                        <p class="text-muted card-text">2017年上映的劍客奇幻電影，為「神鬼奇航系列電影」的第五部作品。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#神鬼奇航2">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="神鬼奇航2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">加勒比海盜 神鬼奇航：死無對證</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/神鬼奇航.jpg" class="card-img-top" alt="">
+                                                        《加勒比海盜－神鬼奇航：死無對證》（英語：Pirates of the Caribbean: Dead Men Tell No Tales，也稱作Pirates of the Caribbean: The Revenge of Salazar及Pirates of the Caribbean: Salazar's Revenge）是一部於2017年上映的美國劍客奇幻電影，為「神鬼奇航系列電影」的第五部作品。由喬阿吉姆·羅恩尼和艾斯彭·山德伯格共同執導，傑夫·內桑森編劇，而傑瑞·布洛克海默則再次擔任監製。強尼·戴普、傑佛瑞·羅許、奧蘭多·布魯、綺拉·奈特莉皆回歸分別飾演傑克·史派羅、海克特·巴博薩、威爾·杜納、伊莉莎白·史旺，其他演員包含哈維爾·巴登、布蘭頓·思懷茲、凱亞·絲柯黛蘭莉歐與凱文·麥克納利。電影定於2017年5月26日在美國上映。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=LldnSzk4uD4" target="_blank" title="https://www.youtube.com/watch?v=LldnSzk4uD4">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/哈利波特.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">哈利波特：死神的聖物Ⅱ</h5>
+                                        <p class="text-muted card-text">2011年上映的奇幻電影，劇情根據小說《哈利波特—死神的聖物》改編</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#哈利波特2">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="哈利波特2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">哈利波特：死神的聖物Ⅱ</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/哈利波特.jpg" class="card-img-top" alt="">
+                                                        《哈利波特－死神的聖物2》（英語：Harry Potter and the Deathly Hallows – Part 2）根據J·K·羅琳所寫的哈利波特小說系列的第七本《哈利波特—死神的聖物》改編。此書是唯一一本被改編拍成兩套電影的小說，這兩套電影為哈利波特系列電影中第七及第八部電影，亦是該系列的最後兩部。導演繼續由拍攝第五、六集的導演—大衛·葉斯執導。這兩套電影由華納兄弟發行，第二部以3D及2D兩種版本上映，第二部是哈利波特電影系列中首次把整套電影以3D形式播放，另外亦推出IMAX版本。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=jgpJoKDzoZ4" target="_blank" title="https://www.youtube.com/watch?v=jgpJoKDzoZ4">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/納尼亞.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">納尼亞傳奇：黎明行者號</h5>
+                                        <p class="text-muted card-text">2010年上映的奇幻冒險電影，劇情根據小說《黎明行者號》改編。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#納尼亞2">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="納尼亞2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">納尼亞傳奇：黎明行者號</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/納尼亞.jpg" class="card-img-top" alt="">
+                                                        《納尼亞傳奇：黎明行者號》（英語：The Chronicles of Narnia: The Voyage of the Dawn Treader）是一部於2010年上映的奇幻冒險電影，劇情根據小說《黎明行者號》改編，且是第三部以C·S·路易斯史詩奇幻系列《納尼亞傳奇》作為藍本的電影（小說時序中排第五）。該片也為威登媒體製作的《納尼亞傳奇》系列電影中的第三部，且同時也是最後一部。《納尼亞傳奇：黎明行者號》是系列中唯一由二十世紀福斯發行的作品，由於華特迪士尼影業選擇不與威登媒體在預算糾紛後繼續擔任製片商。該片也是系列中唯一以數位3D格式上映的作品。
+
+                                                        電影為麥可·艾普特執導，克里斯多佛·馬庫斯、史蒂芬·麥費利及麥克·派卓羅尼共同編劇。演員包含喬基·亨莉、史肯達·凱恩斯、班·巴恩斯、威爾·普爾特、蒂妲·絲雲頓、連恩·尼遜與賽門·佩吉等人。該片於2010年11月30日在倫敦皇家電影專場上首映，並在同年12月10日開始於全球發行。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=vfc4xqs2A1c" target="_blank" title="https://www.youtube.com/watch?v=vfc4xqs2A1c">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/魔戒.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">魔戒三部曲：王者再臨</h5>
+                                        <p class="text-muted card-text">2003年上映的史詩奇幻電影，劇情根據小說《魔戒》的第二部曲及第三部曲改編。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#魔戒2">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="魔戒2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">魔戒三部曲：王者再臨</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/魔戒.jpg" class="card-img-top" alt="">
+                                                        《魔戒三部曲：王者再臨》（英語：The Lord of the Rings: The Return of the King），是一部於2003年上映的史詩奇幻電影，由彼得·傑克森執導，此片是根據J·R·R·托爾金的奇幻小說《魔戒》的第二部曲及第三部曲改編而成。本片也是《魔戒電影三部曲》的完結篇，前兩部曲分別為《魔戒首部曲：魔戒現身》（2001）與《魔戒二部曲：雙城奇謀》（2002）。
+
+                                                        電影於2003年12月17日上映，《魔戒三部曲：王者再臨》獲得巨大迴響並且成為史上最賣座的電影之一。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=bhZi6VX7xVg" target="_blank" title="https://www.youtube.com/watch?v=bhZi6VX7xVg">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="container">
+                        <h2>英雄</h2>
+                        <div class="row">
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/蜘蛛人.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">蜘蛛人：離家日</h5>
+                                        <p class="text-muted card-text">2019年上映的超級英雄電影，為「漫威電影宇宙」系列的第二十三部電影，亦是漫威電影宇宙「無限傳奇」的最後一部電影。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#蜘蛛人2">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="蜘蛛人2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">蜘蛛人：離家日</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/蜘蛛人.jpg" class="card-img-top" alt="">
+                                                        《蜘蛛人：離家日》（英語：Spider-Man: Far From Home，中國大陸譯《蜘蛛俠：英雄遠征》，香港譯《蜘蛛俠：決戰千里》）是一部於2019年上映的美國超級英雄電影，由漫威漫畫旗下角色蜘蛛人故事改編，哥倫比亞影業與漫威工作室共同製片，並由索尼影視娛樂發行。本片為2017年電影《蜘蛛人：返校日》的續集，「漫威電影宇宙」系列的第二十三部電影，亦是漫威電影宇宙「無限傳奇」的最後一部電影。由強·華茲執導，克里斯·麥肯納和艾瑞克·桑默斯共同編劇。主演包括湯姆·霍蘭德、山繆·傑克森、辛蒂亞、蔻碧·史莫德、強·法夫洛、J·B·史慕福、雅各布·貝塔隆、馬丁·斯塔爾、瑪麗莎·托梅和傑克·葛倫霍。該片為首部史丹·李未在漫威電影宇宙中客串角色的電影，亦是繼《終局之戰》後第二部漫威電影宇宙加上全新片段後重映的作品。電影於2019年7月2日在美國以IMAX和3D形式發行。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=6ytcJdQpvVE" target="_blank" title="https://www.youtube.com/watch?v=6ytcJdQpvVE">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/黑鳳凰.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">X戰警：黑鳳凰</h5>
+                                        <p class="text-muted card-text">2019年上映的超級英雄電影，角色取自漫威漫畫的漫畫書《X戰警》，為「X戰警系列電影」的第十二部作品，也是其系列最終回。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#黑鳳凰2">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="黑鳳凰2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">X戰警：黑鳳凰</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/黑鳳凰.jpg" class="card-img-top" alt="">
+                                                        《X戰警：黑鳳凰》（英語：Dark Phoenix，或記作X-Men: Dark Phoenix）是2019年上映的美國超級英雄電影，角色取自漫威漫畫的漫畫書《X戰警》，由二十世紀福斯製作並通過華特迪士尼工作室電影執行發行。該片為「X戰警系列電影」的第十二部作品，也是其系列最終回。本片原本作為全新的X戰警電影三部曲的首部曲，但在迪士尼收購影響下，確認為「X戰警系列電影」最終章。其後福斯重新製作，並且由迪士尼發行。也是第一部由迪士尼發行非「漫威電影宇宙」的漫威電影。
+
+                                                        《X戰警：黑鳳凰》由賽門·金柏格執導及編劇，詹姆斯·麥艾維、麥可·法斯賓達、珍妮佛·勞倫斯、尼可拉斯·霍特、蘇菲·特納、泰·謝里丹、雅莉珊卓·希普以及潔西卡·崔絲坦主演。在《X戰警：黑鳳凰》中，X戰警必須面對黑鳳凰與傾巢而出的迪巴利人。該片於2019年6月7日在美國上映。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=6HukltTp8fc" target="_blank" title="https://www.youtube.com/watch?v=6HukltTp8fc">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/復仇者.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">復仇者聯盟：終局之戰</h5>
+                                        <p class="text-muted card-text">2019年上映的史詩超級英雄電影，改編自漫威漫畫旗下的超級英雄團隊復仇者聯盟，為「漫威電影宇宙」系列的第22部電影作品。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#復仇者2">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="復仇者2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">復仇者聯盟：終局之戰</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/復仇者.jpg" class="card-img-top" alt="">
+                                                        《復仇者聯盟：終局之戰》（英語：Avengers: Endgame）是一部於2019年上映的美國史詩超級英雄電影，改編自漫威漫畫旗下的超級英雄團隊復仇者聯盟，由漫威影業製作及華特迪士尼工作室電影發行。本片為2018年電影《復仇者聯盟：無限之戰》的續集，同時也是漫威電影宇宙（MCU）系列的第22部電影作品。此電影由羅素兄弟執導，及由史蒂芬·麥費利與克里斯多佛·馬庫斯負責撰寫劇本。電影主演包括小勞勃·道尼、克里斯·伊凡、馬克·盧法洛、克里斯·漢斯沃、史嘉蕾·喬韓森、傑瑞米·雷納、唐·奇鐸、保羅·路德、布麗·拉森、凱倫·吉蘭、達娜·古瑞拉、布萊德利·庫柏和喬許·布洛林。克里斯·伊凡表示，本片將是他最後一部漫威宇宙系列的電影。電影中，復仇者聯盟中的倖存成員與他們的盟友共同努力以扭轉薩諾斯在無限之戰中所造成的傷害。電影於2019年4月22日在洛杉磯舉行全球首映禮，並於2019年4月26日在美國以IMAX和3D形式發行。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=ZrB7EdfPBJU" target="_blank" title="https://www.youtube.com/watch?v=ZrB7EdfPBJU">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/驚奇隊長.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">驚奇隊長</h5>
+                                        <p class="text-muted card-text">2019年上映的超級英雄電影，劇情改編自漫威漫畫角色卡蘿·丹佛斯，為「漫威電影宇宙」系列的第二十一部電影。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#驚奇隊長2">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="驚奇隊長2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">驚奇隊長</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/驚奇隊長.jpg" class="card-img-top" alt="">
+                                                        《驚奇隊長》（英語：Captain Marvel，香港譯《Marvel隊長》，中國大陸譯《驚奇隊長》）是一部於2019年上映的美國超級英雄電影，劇情改編自漫威漫畫角色卡蘿·丹佛斯。漫威工作室製片，華特迪士尼工作室電影負責發行，本片為漫威電影宇宙系列的第二十一部電影。安娜·波頓和瑞安·弗雷克執導，並與梅格·雷法芙、妮可·帕爾曼、吉妮瓦·羅伯森-多瑞、莉茲·弗拉夫和卡莉·門施共同編劇。由布麗·拉森、山繆·傑克森、班·曼德森、吉蒙·韓蘇、李·培斯、拉沙納·林奇、嘉瑪·陳、安妮特·班寧、克拉克·格雷格和裘德·洛主演。背景設定在1990年代，講述卡蘿·丹佛斯在地球陷入兩個外星人世界的宇宙戰爭之間後，成為驚奇隊長。該片為漫威電影宇宙的首部女英雄獨立電影。本片開頭標誌特效所出現角色全部改為已逝世的史丹·李並紀念他。《驚奇隊長》於2019年3月8日在美國上映（含IMAX版本和3D版本）。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=8_iXX6t6nFY" target="_blank" title="https://www.youtube.com/watch?v=8_iXX6t6nFY">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="container">
+                        <h2>恐怖</h2>
+                        <div class="row">
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/牠.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">牠：第二章</h5>
+                                        <p class="text-muted card-text">2019年上映的超自然冒險恐怖片，電影改編自史蒂芬·金的1986年小說《牠》，為2017年電影《牠》的續集。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#牠2">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="牠2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">牠：第二章</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/牠.jpg" class="card-img-top" alt="">
+                                                        《牠：第二章》（英語：It Chapter Two，中國大陸、香港譯《小丑回魂2》）是一部2019年美國超自然冒險恐怖片，由安迪·馬希提執導，蓋瑞·道柏曼編劇。電影改編自史蒂芬·金的1986年小說《牠》，為2017年電影《牠》的續集，由新線影業、林氏電影公司、凱森史密斯製作公司和眩暈娛樂製片，華納兄弟發行。
+
+                                                        電影主演包括詹姆斯·麥艾維、潔西卡·崔絲坦、比爾·哈德、以賽亞·穆斯塔法、傑·瑞安、詹姆士·蘭森、安迪·賓和比爾·史柯斯嘉。主體拍攝於2018年6月18日在加拿大多倫多進行，並於10月31日結束拍攝。
+
+                                                        電影於2019年9月6日在美國上映。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=WuiEiE0nXio" target="_blank" title="https://www.youtube.com/watch?v=WuiEiE0nXio">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/安娜.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">安娜貝爾回家囉</h5>
+                                        <p class="text-muted card-text">2019年上映的超自然恐怖片，為2017年電影《安娜貝爾：造孽》的續集，同時是厲陰宅宇宙的第四部衍生作品。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#安娜2">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="安娜2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">安娜貝爾回家囉</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/安娜.jpg" class="card-img-top" alt="">
+                                                        《安娜貝爾回家囉》（英語：Annabelle Comes Home）是一部於2019年上映的美國超自然恐怖片，由蓋瑞·道柏曼編劇和執導，彼得·沙佛朗和溫子仁製片，為2017年電影《安娜貝爾：造孽》的續集，同時是厲陰宅宇宙的第四部衍生作品。主演包括麥肯娜·葛瑞絲、麥蒂森·艾斯曼和凱蒂·薩里夫，包含派翠克·威爾森和薇拉·法蜜嘉回歸飾演華倫夫婦。
+
+                                                        電影在美國於2019年6月26日由華納兄弟發行。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=T3wEJMWgT60" target="_blank" title="https://www.youtube.com/watch?v=T3wEJMWgT60">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/哭泣.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">哭泣的女人</h5>
+                                        <p class="text-muted card-text">2019年上映的靈異恐怖片，該片於2019年3月被官方證實為厲陰宅宇宙的一部分。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#哭泣2">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="哭泣2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">哭泣的女人</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/哭泣.jpg" class="card-img-top" alt="">
+                                                        《哭泣的女人》（英語：The Curse of La Llorona，中國大陸譯《哭泣的女人的詛咒》，香港譯《哭泣的女詭》）是一部2019年美國靈異恐怖片，由麥可·查維斯（Michael Chaves）執導，米克基·達特里（Mikki Daughtry）和托比亞斯·伊安柯尼斯撰寫劇本。其主演包括琳達·卡德琳妮、雷蒙·克魯茲及帕翠西婭·維拉奎茲。該片由溫子仁的製片公司Atomic Monster Productions製作，而他也在片中擔任監製。該片於2019年3月被官方證實為厲陰宅宇宙的一部分。
+
+                                                        該片原名為《The Children》。《哭泣的女人》由華納兄弟排定於2019年4月19日在美國上映。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=Y1NmTqgQZrU" target="_blank" title="https://www.youtube.com/watch?v=Y1NmTqgQZrU">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/忌日.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">祝你忌日快樂</h5>
+                                        <p class="text-muted card-text">2019年上映的校園科幻恐怖喜劇片，該片為2017年電影《忌日快樂》的續集。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#忌日2">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="忌日2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">祝你忌日快樂</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/忌日.jpg" class="card-img-top" alt="">
+                                                        《祝你忌日快樂》（英語：Happy Death Day 2U，中國大陸譯《忌日快樂2》，香港譯《死亡無限2次LOOP》）是一部2019年美國校園科幻恐怖喜劇片，由克里斯多福·B·藍登執導和編劇，該片為2017年電影《忌日快樂》的續集。其主演包括潔西卡·羅瑟、伊瑟瑞爾·布薩德、蘇瑞吉·沙瑪、莎拉·亞金（Sarah Yarkin）及露比·莫汀。該片定於2019年2月14日在美國上映。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=i62fw7wNXQg" target="_blank" title="https://www.youtube.com/watch?v=i62fw7wNXQg">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <h2>動畫</h2>
+                        <div class="row">
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/阿達.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">阿達一族</h5>
+                                        <p class="text-muted card-text">2019年上映的電腦動畫電影，改編自查理斯·亞當斯的漫畫《阿達一族》。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#阿達2">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="阿達2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">阿達一族</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/阿達.jpg" class="card-img-top" alt="">
+                                                        《阿達一族》（英語：The Addams Family）是一部於2019年上映的美國黑色喜劇電腦動畫電影，改編自查理斯·亞當斯的漫畫《阿達一族》。電影由康拉德·威儂和格雷格·帝爾南共同執導，奧斯卡·伊薩克、莎莉·賽隆、克蘿伊·摩蕾茲、芬恩·沃夫哈德、尼克·克羅爾、史努比狗狗、貝蒂·蜜勒和艾莉森·珍妮配音。
+
+                                                        《阿達一族》由聯美負責北美發行，國際則由環球影業負責發行，並於2019年10月11日在美國上映。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=4rjSMNvkaw4" target="_blank" title="https://www.youtube.com/watch?v=4rjSMNvkaw4">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/壞壞萌雪怪.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">壞壞萌雪怪</h5>
+                                        <p class="text-muted card-text">2019年上映的電腦動畫電影奇幻喜劇冒險片，由夢工廠動畫公司和中國東方夢工廠製作。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#壞壞萌雪怪2">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="壞壞萌雪怪2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">壞壞萌雪怪</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/壞壞萌雪怪.jpg" class="card-img-top" alt="">
+                                                        《壞壞萌雪怪》（英語：Abominable）是一部於2019年上映的中美合拍3D電腦動畫電影奇幻喜劇冒險片，由夢工廠動畫公司和中國東方夢工廠製作，吉爾·庫爾頓和托德·韋爾德曼執導，威廉·戴維斯編劇，配音員包括汪可盈、蔡丞恩、登舍·諾吉·特雷納、埃迪·伊扎德、薩拉·保羅森及周采芹。
+
+                                                        電影於2019年9月27日由環球影業發行。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=XBu2AWepWIo" target="_blank" title="https://www.youtube.com/watch?v=XBu2AWepWIo">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/憤怒鳥.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">憤怒鳥玩電影2：冰的啦！</h5>
+                                        <p class="text-muted card-text">2019年上映的電腦動畫動作喜劇電影，改編自遊戲《憤怒鳥》，為2016年電影《憤怒鳥玩電影》的續集。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#憤怒鳥2">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="憤怒鳥2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">憤怒鳥玩電影2：冰的啦！</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/憤怒鳥.jpg" class="card-img-top" alt="">
+                                                        《憤怒鳥玩電影2：冰的啦！》（英語：The Angry Birds Movie 2）是一部2019年芬蘭、美國合拍的3D電腦動畫動作喜劇電影，改編自遊戲《憤怒鳥》，為2016年電影《憤怒鳥玩電影》的續集，由索普·範·奧爾曼和約翰·賴斯執導，哥倫比亞影業、Rovio動畫和索尼動畫製作。
+
+                                                        電影於2019年8月14日在美國上映，由索尼影視娛樂發行。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=kSnUfyy9p7k" target="_blank" title="https://www.youtube.com/watch?v=kSnUfyy9p7k">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-4">
+                                <div class="card shadow border-0 h-100">
+                                    <img src="img/玩具總動員.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <h5 class="card-title text-white">玩具總動員4</h5>
+                                        <p class="text-muted card-text">2019年上映的3D動畫電影，由皮克斯動畫工作室製作、華特迪士尼工作室電影發行，為「玩具總動員系列電影」的第四部作品。</p>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#玩具總動員2">
+                                            深入了解
+                                        </button>
+                                        <div class="modal fade" id="玩具總動員2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content bg-secondary">
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">玩具總動員4</h2>
+                                                        <button type="button" class="close bg-white" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="img/玩具總動員.jpg" class="card-img-top" alt="">
+                                                        《玩具總動員4》（英語：Toy Story 4，香港譯《反斗奇兵4》，中國大陸譯《玩具總動員4》）是一部於2019年上映的美國3D動畫電影，由皮克斯動畫工作室製作、華特迪士尼工作室電影發行。電影為2010年電影《玩具總動員3》的續集、「玩具總動員系列電影」的第四部作品，由喬許·科雷執導。湯姆·漢克斯、提姆·艾倫、安妮·波特斯、瓊安·庫薩克、華萊士·肖恩、約翰·雷森伯格、布萊克·克拉克、唐·里柯斯和伊絲特拉·哈里斯回歸聲演自己的角色，新的配音員包括托尼·海爾、基根-麥可·奇、喬登·皮爾、基努·李維和克莉絲汀娜·韓翠克絲，電影原定於2017年6月16日發行，但是在2015年10月8日，皮克斯將上映日期推遲到2018年6月15日，原本的檔期被《汽車總動員3》所取代。2016年10月26日，發布又被延遲，定於2019年6月21日上映，而2018年6月15日的檔期則改成《超人特攻隊2》。
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-default text-warning" href="https://www.youtube.com/watch?v=RA-11WlGGkE" target="_blank" title="https://www.youtube.com/watch?v=RA-11WlGGkE">觀看預告片</a>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane " id="menu1">
+            <div class="container">
+                <h2>推薦電影</h2>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <img class="card-img-bottom" src="img/%E7%A5%9E%E9%AC%BC%E5%A5%87%E8%88%AA.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text text-dark">電影名稱:</p>
+                                <p class="card-text text-dark">推薦指數★★★★★</p>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <img class="card-img-bottom" src="img/%E7%A5%9E%E9%AC%BC%E5%A5%87%E8%88%AA.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text text-dark">電影名稱:</p>
+                                <p class="card-text text-dark">推薦指數★★★★★</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <img class="card-img-bottom" src="img/%E7%A5%9E%E9%AC%BC%E5%A5%87%E8%88%AA.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text text-dark">電影名稱:</p>
+                                <p class="card-text text-dark">推薦指數★★★★★</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <img class="card-img-bottom" src="img/%E7%A5%9E%E9%AC%BC%E5%A5%87%E8%88%AA.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text text-dark">電影名稱:</p>
+                                <p class="card-text text-dark">推薦指數★★★★★</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane " id="menu2">
+            <div class="container">
+                <!-- youtube 影片顯示嵌入 -->
+                <section class="bg-secondary">
+                    <div class="container">
+                        
+                        <h2> 最新消息</h2>
+                        <div class="marqee">
+			<ul>
+				<li>《網站維修公告》本網站將於11月17日23:00進行維護，於11月18日6:00恢復運作</li>
+				<li>《網站資訊》本網站新增留言版功能，可點擊上方敲碗留言進行匿名留言</li>
+				
+			</ul>
+		</div>
+                        
+                        <h3></h3>
+                       
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>【決戰中途島】正式預告 年度壓軸重量級電影 11.8</h5>
+                                <iframe width="504" height="279" src="https://www.youtube.com/embed/WTFJTZIqO3c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            
+                                <div class="col-md-6">
+                                    <h5>【絕鯊47：猛鯊出籠】11月1日 死裡逃生</h5>
+                                    <iframe width="504" height="279" src="https://www.youtube.com/embed/h47vbWJlpjo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            
+
+                        </div>
+                        <h5>《電影資訊》【冰雪奇緣2】將於11月21日上映</h5>
+                        
+                        <h5>《網站資訊》本網站新增留言版功能，可點擊上方敲碗留言進行匿名留言</h5>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="tab-pane " id="menu3">
+            <div class="container">
+                <h2>本周更新</h2>
+                <div class="row">
+
+
+                </div>
+            </div>
+            <p>用卡片新增 最新電影</p>
+        </div>
+        <div class="tab-pane " id="menu4">
+            <div class="container">
+                <h2>敲碗留言</h2>
+                <p>新增，留言介面</p>
+                <div class="container" id="box">
+                    <form action="" role="form">
+                        <div class="form-group">
+                            <label for="username">
+                                使用者名稱：
+                            </label>
+                            <input v-model="username" type="text" id="username" placeholder="請輸入使用者名稱" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="age">
+                                年　齡：
+                            </label>
+                            <input v-model="age" type="text" id="age" placeholder="請輸入年齡" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input v-on:click="add()" type="button" name="" value="新增" class="btn btn-primary">
+                            <input type="reset" name="" value="重置" class="btn btn-danger">
+                        </div>
+                    </form>
+                    <hr>
+                    <table class="table table-bordered table-hover">
+                        <caption class="text-white">
+                            <h4>使用者留言表</h4>
+                        </caption>
+                        <thead>
+                            <tr class="text-info">
+                                <th class="text-center">序號</th>
+                                <th class="text-center">名字</th>
+                                <th class="text-center">年齡</th>
+                                <th class="text-center">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="item in myData" class="text-warning text-center">
+                                <td style="vertical-align:middle">{{$index + 1}}</td>
+                                <td style="vertical-align:middle">{{item.name}}</td>
+                                <td style="vertical-align:middle">{{item.age}}</td>
+                                <td class="text-center">
+                                    <button class="btn btn-primary btn-sm">新增</button>
+                                    <button v-on:click="nowIndex = $index" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#layer">刪除</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td v-show="myData.length != 0" colspan="4" class="text-right">
+                                    <button class="btn btn-danger" data-toggle="modal" data-target="#layer" v-on:click="nowIndex = -2">全部刪除</button>
+                                </td>
+                            </tr>
+                            <tr v-show="myData.length == 0">
+                                <td colspan="4" class="text-center text-muted">
+                                    <p>暫無資料。。</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 模態框 -->
+                    <div role="dialog" class="modal fade bs-example-modal-sm" id="layer">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span>×</span>
+                                    </button>
+                                    <h4 class="modal-title">確認刪除麼?</h4>
+                                </div>
+                                <div class="modal-body text-right">
+                                    <button class="btn btn-danger btn-sm" data-dismiss="modal">取消</button>
+                                    <button v-on:click="deleteMsg(nowIndex)" class="btn btn-primary btn-primary btn-sm" data-dismiss="modal">確定</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane " id="menu5">
+            <div class="container">
+                <h2>第9組-組員</h2>
+
+                <div class="row">
+                    <div class="col-md-3 mb-4">
+
+
+                        <div class="card " style=" width: 14rem;">
+                            <img class="card-img-top" src="img/怪1.png" alt="Card image cap">
+                            <div class="card-body text-dark">
+                                <h5 class="card-title">王璟澔 1071461059</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="card " style=" width: 14rem;">
+                            <img class="card-img-top" src="img/怪2.png" alt="Card image cap">
+                            <div class="card-body text-dark">
+                                <h5 class="card-title">邱柏翔 1071461065</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="card " style=" width: 14rem;">
+                            <img class="card-img-top" src="img/怪3.png" alt="Card image cap">
+                            <div class="card-body text-dark">
+                                <h5 class="card-title">陳冠宇 1071451022</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="card " style=" width: 14rem;">
+                            <img class="card-img-top" src="img/怪4.png" alt="Card image cap">
+                            <div class="card-body text-dark">
+                                <h5 class="card-title">蔡宏林 1071461109</h5>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <!-- 底圖 -->
+    <div class="py-3 bg-secondary ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 ">
+                    <h5>聯絡資訊</h5>
+                    <ul class="contact-info list-unstyled">
+                        <li><a href="mailto:ssales@landy.com" class="text-dark">hell@bootstrap101.com</a>
+                        </li>
+                        <li><a href="tel:123456789" class="text-dark">+00 123 456 789</a>
+                        </li>
+                    </ul>
+                    <p class="text-dark">build on the card title and make up the bulk of the </p>
+                </div>
+
+                <div class="col-lg-4">
+                    <h5>常見問題</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark">無法更新訊息</a></li>
+                        <li><a href="#" class="text-dark">圖片無法顯示</a></li>
+                        <li><a href="#" class="text-dark">搜尋沒反應</a></li>
+                        <li><a href="#" class="text-dark">電影如何加入我的最愛</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <h5>法律聲明</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark">著作權</a></li>
+                        <li><a href="#" class="text-dark">隱私權</a></li>
+                        <li><a href="#" class="text-dark">商標</a></li>
+                        <li><a href="#" class="text-dark">專利</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.2.1.js"></script>
+    <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+</body>
+
+</html>
